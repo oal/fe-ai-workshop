@@ -53,6 +53,19 @@ Workshopen består av 4 praktiske øvelser:
 2. Start med Øvelse 1 i `exercises/01-warm-up/`
 3. Jobb deg gjennom øvelsene i ditt eget tempo
 
+## Prøv med flere modeller
+
+For å få mest mulig ut av workshopen, anbefaler vi å prøve øvelsene med ulike AI-modeller og sammenligne resultatene:
+
+**State-of-the-art modeller:**
+- Claude Opus 4.5 (Anthropic)
+- GPT 5.1 Codex Max (OpenAI)
+
+**Eldre modeller (standard i mange verktøy):**
+- GPT-4.1 (standard i GitHub Copilot)
+
+Se [cheatsheet.md](./cheatsheet.md#nullstille-øvelser) for kommandoer til å nullstille en øvelse og starte på nytt.
+
 ## Ressurser
 
 - [GitHub Copilot dokumentasjon](https://docs.github.com/en/copilot)

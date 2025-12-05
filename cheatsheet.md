@@ -17,6 +17,49 @@
 - `/clear`: Tøm samtalehistorikken
 - `/reset`: Start en ny samtale
 
+## Nullstille øvelser
+
+For å prøve en øvelse på nytt (f.eks. med en annen AI-modell), kan du nullstille endringene dine:
+
+### Nullstill en enkelt øvelse
+```bash
+# Nullstill øvelse 1 (warm-up)
+git checkout -- exercises/01-warm-up/
+
+# Nullstill øvelse 2 (react-app)
+git checkout -- exercises/02-react-app/
+
+# Nullstill øvelse 3 (debug-challenge)
+git checkout -- exercises/03-debug-challenge/
+
+# Nullstill øvelse 4 (design-to-code)
+git checkout -- exercises/04-design-to-code/
+```
+
+> **Tips:** Husk å committe eller stashe endringene dine først hvis du vil beholde dem!
+
+---
+
+## Sammenlign AI-modeller
+
+Ulike AI-modeller gir ofte forskjellige resultater. Prøv samme øvelse med flere modeller for å se forskjellene!
+
+### State-of-the-art modeller
+- **Claude Opus 4.5** - Anthropics mest kapable modell (velg i Claude Code/Claude.ai)
+- **GPT 5.1 Codex Max** - OpenAIs nyeste modell
+
+### Eldre modeller
+- **GPT-4.1** - Standard i GitHub Copilot, god baseline for sammenligning
+
+### Hva du kan sammenligne
+- Kvalitet på kode
+- Forståelse av kontekst
+- Evne til å følge instruksjoner
+- Planlegging og arkitektur (i Plan Mode)
+- Debugging-evner
+
+---
+
 ## Plan Mode Tips
 
 ### Hva er Plan Mode?

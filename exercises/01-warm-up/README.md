@@ -9,7 +9,7 @@ En enkel landingsside for et SaaS-produkt med ufullstendig styling. Denne øvels
 ## Oppgaver
 
 ### 1. Forstå eksisterende kode
-- Åpne `index.html` og `styles.css`
+- Åpne `vite-starter/index.html` og `vite-starter/src/styles.scss`
 - Bruk AI-assistenten din til å forklare eksisterende kode
 - Spør om BEM-navngivningskonvensjonen som brukes i CSS
 - Be om forklaring på CSS custom properties (variabler)
@@ -31,11 +31,6 @@ En enkel landingsside for et SaaS-produkt med ufullstendig styling. Denne øvels
 
 ## Hvordan åpne
 
-### Alternativ 1: Statisk fil
-Åpne `index.html` direkte i nettleseren din. Ingen server eller build-prosess er nødvendig.
-
-### Alternativ 2: Med Vite (hot reload)
-For en bedre utvikleropplevelse med hot reloading:
 ```bash
 cd vite-starter
 npm install
@@ -45,9 +40,9 @@ Dette starter en utviklingsserver med automatisk oppdatering når du endrer kode
 
 ## Teknologier
 - HTML5
-- Vanilla CSS / SCSS (med BEM-navngivning)
-- Vanilla JavaScript (legges til av deg)
-- Vite (valgfritt, for hot reload)
+- SCSS (med BEM-navngivning)
+- TypeScript
+- Vite (for hot reload)
 
 ## Tips
 - Start med å lese gjennom koden grundig
