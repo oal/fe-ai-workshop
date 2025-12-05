@@ -30,12 +30,24 @@ En enkel landingsside for et SaaS-produkt med ufullstendig styling. Denne øvels
   - Lagre brukerens preferanse i localStorage
 
 ## Hvordan åpne
+
+### Alternativ 1: Statisk fil
 Åpne `index.html` direkte i nettleseren din. Ingen server eller build-prosess er nødvendig.
+
+### Alternativ 2: Med Vite (hot reload)
+For en bedre utvikleropplevelse med hot reloading:
+```bash
+cd vite-starter
+npm install
+npm run dev
+```
+Dette starter en utviklingsserver med automatisk oppdatering når du endrer koden.
 
 ## Teknologier
 - HTML5
-- Vanilla CSS (med BEM-navngivning)
+- Vanilla CSS / SCSS (med BEM-navngivning)
 - Vanilla JavaScript (legges til av deg)
+- Vite (valgfritt, for hot reload)
 
 ## Tips
 - Start med å lese gjennom koden grundig

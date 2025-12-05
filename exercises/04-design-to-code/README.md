@@ -14,7 +14,6 @@ Dette kurset tilbyr to spor avhengig av om du har tilgang til Figma med MCP-inte
 - Figma Desktop app installert
 - Figma Dev seat (for å aktivere MCP server)
 - En Figma-fil du har tilgang til
-- Claude Code CLI med MCP konfigurert
 
 ### Instruksjoner
 
@@ -29,15 +28,15 @@ Dette kurset tilbyr to spor avhengig av om du har tilgang til Figma med MCP-inte
 - Velg "Enable desktop MCP server"
 - Bekreft at serveren kjører (du skal se en melding om at MCP er aktivert)
 
-#### 3. Implementer Designet med Claude Code
-Bruk Claude Code CLI til å hente designet og implementere det:
+#### 3. Implementer designet
+Bruk Copilot CLI / Claude Code CLI til å hente designet og implementere det:
 
 ```bash
-# Start Claude Code i prosjektmappen din
-claude code
+# Start Copilot CLI i prosjektmappen din
+copilot
 
 # Eksempel på prompt:
-"Using Figma MCP, get the design for [komponentnavn] from my Figma file and implement it as a React component with TypeScript"
+"Using Figma MCP, get the design for [FIGMA-KOMPONENT-LENKE] from my Figma file and implement it as a React component with TypeScript"
 ```
 
 #### 4. Verifiser Implementasjonen med Playwright MCP
@@ -71,6 +70,7 @@ Etter at komponenten er implementert, bruk Playwright til å verifisere:
 ### Tips for Track A
 - Start med enkle komponenter før du går videre til komplekse layouts
 - Bruk Figma's komponentnavn konsekvent i både design og kode
+- Kopier lenker til komponent i Figma (figma foreslår prompt med lenke med @ foran)
 - Verifiser farger, spacing og typografi nøye mot designet
 - Iterer ved å spørre AI-assistenten om å justere detaljer som ikke matcher perfekt
 
@@ -81,32 +81,54 @@ Etter at komponenten er implementert, bruk Playwright til å verifisere:
 ### Forutsetninger
 - VS Code med Copilot Chat installert, eller Claude Code CLI
 - Et screenshot av en komponent/design du vil implementere
-- Node.js og React development environment
+- Node.js installert
+
+### Velg et Starter-prosjekt
+
+Vi har to ferdigkonfigurerte starter-prosjekter du kan bruke:
+
+**React + TypeScript** (`react-starter/`):
+```bash
+cd react-starter
+npm install
+npm run dev
+```
+
+**HTML + SCSS** (`html-starter/`):
+```bash
+cd html-starter
+npm install
+npm run dev
+```
+
+Begge prosjektene bruker Vite med hot reloading. Velg React hvis du er komfortabel med React, eller HTML + SCSS hvis du foretrekker å jobbe uten rammeverk.
 
 ### Instruksjoner
 
-#### 1. Finn eller Lag et Design
-Du har flere alternativer:
+#### 1. Hovedoppgave: Duolingo Quiz-komponent
+Implementer Duolingo quiz-grensesnittet fra `duolingo.png`:
 
-**Alternativ A: Bruk et eksisterende screenshot**
-- Et eksempel på en dashboard-komponent finnes i `designs/`-mappen
-- Du kan også finne inspirasjon online (se tips nedenfor)
+**Designet inneholder:**
+- Fremdriftslinje øverst med X-knapp for å lukke
+- "NEW WORD" badge i grønt
+- "Select the correct image" instruksjonstekst
+- Audio-knapp med ordet "Kaffee" (tysk for kaffe)
+- 2x2 grid med bildekort (tea, coffee, bread, milk)
+- Valgt tilstand med blå highlight (coffee er valgt)
+- Grønn "CHECK"-knapp nederst
 
-**Alternativ B: Screenshot fra eksisterende nettsider**
-- Finn en komponent du liker på nettet
-- Ta et screenshot (bruk Windows Snipping Tool eller lignende)
-- Lagre det i `designs/`-mappen
+**Ekstra utfordring:** Når du er ferdig, finn et annet design å klone fra Dribbble eller Behance (se ressurser nedenfor).
 
 #### 2. Implementer med VS Code Copilot Chat
 
 **Metode 1: VS Code Copilot Chat**
 - Åpne VS Code Copilot Chat
 - Klikk på "Attach" eller ikon for å legge ved filer
-- Velg screenshot-filen
+- Velg `duolingo.png`
 - Skriv prompt:
 
 ```
-"Implement this component in React with TypeScript. Use modern best practices and make it responsive."
+"Implement this Duolingo quiz component in React with TypeScript. Include the progress bar, audio button, image grid, and check button."
 ```
 
 **Metode 2: Claude Code CLI**
@@ -114,22 +136,22 @@ Du har flere alternativer:
 - Bruk en prompt som refererer til bildet:
 
 ```bash
-"Look at the design in designs/dashboard.png and implement it as a React component with TypeScript and Tailwind CSS"
+"Look at the design in duolingo.png and implement it as a React component with TypeScript and CSS"
 ```
 
 #### 3. Iterer og Forbedre
 Bruk oppfølgingsprompts for å justere implementasjonen:
 
 ```
-"Make the buttons more rounded with larger border radius"
+"Add hover effect to the image cards when hovering"
 
-"Change the color scheme to use blue as the primary color instead of purple"
+"Make the selected card have a thicker blue border like in the design"
 
-"Add hover effects to all interactive elements"
+"Add a click handler that toggles the selection state"
 
-"Make the layout more compact for mobile devices"
+"Style the CHECK button with the exact green color from the design"
 
-"Add proper TypeScript types for all props"
+"Add a subtle animation when selecting a card"
 ```
 
 #### 4. Verifiser med Playwright MCP
@@ -137,44 +159,44 @@ Når komponenten er implementert, test den:
 
 ```bash
 # I Claude Code:
-"Using Playwright MCP, navigate to http://localhost:3000 and verify that the dashboard component displays correctly. Check that all buttons are clickable and the layout is responsive."
+"Using Playwright MCP, navigate to http://localhost:3000 and verify that the quiz component displays correctly. Click on each image card and verify the selection state changes."
 
-"Take screenshots at different viewport sizes (mobile, tablet, desktop) to verify responsiveness"
+"Take a screenshot and compare it with the original duolingo.png design"
 ```
 
 ### Eksempel-prompts for Screenshot-basert Design-to-Code
 
 **Initial implementasjon:**
 ```
-"Implement this dashboard design as a React component. Use TypeScript, Tailwind CSS, and follow Material Design principles"
+"Implement this Duolingo quiz design as a React component. Use TypeScript and CSS"
 
-"Create this card component with proper shadows, spacing, and typography. Make it reusable with props for title, description, and image"
+"Create the image card grid with proper selection states. Each card should show an image and label"
 
-"Build this navigation menu with working links and mobile-responsive hamburger menu"
+"Build the progress bar component with the X close button on the left"
 ```
 
 **Iterasjon og forbedring:**
 ```
-"The spacing between cards is too tight. Increase it to match the design better"
+"The spacing between cards doesn't match the design. Adjust the gap"
 
-"Add loading states to all buttons"
+"Add the audio button with the speaker icon and 'Kaffee' text"
 
-"The font sizes don't match the design. Can you adjust them?"
+"The selected state needs a light blue background, not just a border"
 
-"Add smooth transitions when hovering over interactive elements"
+"Add smooth transitions when selecting a card"
 
-"Extract reusable components from this layout (Button, Card, Container)"
+"Extract reusable components: ProgressBar, AudioButton, ImageCard, CheckButton"
 ```
 
 **Styling-justeringer:**
 ```
-"Use CSS Grid instead of Flexbox for the main layout"
+"Use CSS Grid for the 2x2 image card layout"
 
-"Add a subtle gradient background like in the design"
+"Match the exact green color (#58cc02) for the CHECK button"
 
-"Make the shadows more pronounced to match the design"
+"Add the dotted underline to the 'Kaffee' text like in the design"
 
-"Implement dark mode support with a toggle button"
+"Make the component mobile-first since it's a mobile app design"
 ```
 
 ### Tips for å Finne Design-inspirasjon
@@ -187,7 +209,6 @@ Hvis du ikke har et eget design, søk etter:
 
 Nyttige ressurser:
 - [Material UI Templates](https://mui.com/material-ui/getting-started/templates/)
-- [Tailwind UI Components](https://tailwindui.com/components)
 - [Dribbble](https://dribbble.com/) (for design-inspirasjon)
 - [Behance](https://www.behance.net/) (for design-inspirasjon)
 
@@ -261,32 +282,30 @@ Nyttige ressurser:
 
 ## Oppgaver
 
-### Oppgave 1: Implementer en Enkel Komponent (15 min)
-- **Track A**: Hent en knapp-komponent fra Figma og implementer den
-- **Track B**: Implementer en knapp fra et screenshot eller design du finner online
+### Oppgave 1: Grunnstruktur
+- **Track A**: Hent en komponent fra Figma og implementer den
+- **Track B**: Implementer grunnstrukturen for Duolingo quiz-komponenten fra `duolingo.png`
+- Lag fremdriftslinje, overskrift, og CHECK-knappen
 - Verifiser at stiler matcher designet
-- Test hover- og active-states
 
-### Oppgave 2: Bygg en Kompleks Layout (30 min)
-- **Track A**: Implementer en hel side/frame fra Figma
-- **Track B**: Implementer et dashboard eller en landing page fra screenshot
-- Del opp i mindre komponenter
-- Sørg for responsivt design
-- Test på ulike skjermstørrelser med Playwright MCP
+### Oppgave 2: Bildegrid med Interaksjon
+- **Track A**: Implementer en interaktiv komponent fra Figma
+- **Track B**: Bygg 2x2 bildegridet med seleksjon-funksjonalitet
+- Implementer valgt tilstand (blå highlight)
+- Legg til hover-effekter
+- Test at kun ett kort kan være valgt om gangen
 
-### Oppgave 3: Iterer og Forbedre (15 min)
+### Oppgave 3: Iterer og Forbedre
 - Start med implementasjonen fra Oppgave 2
-- Gjør minst 5 iterasjoner for å forbedre designet
+- Gjør minst 5 iterasjoner for å matche designet bedre
 - Fokuser på detaljer: spacing, farger, animasjoner
+- Legg til audio-knappen med "Kaffee" tekst
 - Sammenlign final versjon med original-designet
 
-### Oppgave 4: Full Design-to-Production Flow (45 min)
-- Velg et komplett design (flere komponenter)
-- Implementer alle komponenter
-- Sett opp proper komponent-hierarki
-- Lag en storybook eller demo-side
-- Test alt med Playwright MCP
-- Dokumenter komponenter med JSDoc-kommentarer
+### Oppgave 4: Ekstra Utfordring
+- Finn et nytt design på Dribbble eller Behance
+- Implementer det fra scratch med samme tilnærming
+- Test med Playwright MCP
 
 ---
 
@@ -317,7 +336,6 @@ Etter å ha fullført denne øvelsen skal du kunne:
 ### Generelt:
 - [Playwright Testing Guide](https://playwright.dev/)
 - [React TypeScript Best Practices](https://react-typescript-cheatsheet.netlify.app/)
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 - [Material UI Documentation](https://mui.com/)
 
 ---
