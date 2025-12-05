@@ -1,5 +1,9 @@
 # AI Coding Cheatsheet
 
+> **Merk:** Denne guiden inneholder tips spesifikke for ulike verktøy. Bruk seksjonene som er relevante for ditt oppsett.
+
+---
+
 ## Claude Code Snarveier
 
 ### Viktige tastatursnarveier

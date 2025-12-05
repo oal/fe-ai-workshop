@@ -26,39 +26,30 @@ npm run dev
 - Prøv å legge til en ny bruker
 - Observer ytelsen
 
-### 2. Bruk Copilot CLI til debugging
-```bash
-# Start Copilot CLI
-copilot
+### 2. Beskriv problemet til AI-assistenten
+Når du har observert et problem, beskriv det til AI-assistenten din:
 
-# Beskriv buggen du ser, for eksempel:
-# "The app keeps making network requests over and over"
-# "When I add a new user, the list doesn't update correctly"
-# "The button styling looks wrong"
-```
+**Eksempel-prompts:**
+- "Appen gjør uendelig mange nettverkskall - hva kan være galt?"
+- "Når jeg legger til en bruker, oppdateres ikke listen korrekt"
+- "Knappen har feil styling - kan du se på CSS-en?"
+- "Hvorfor får jeg denne advarselen i konsollen: [lim inn advarsel]"
 
-La Copilot foreslå hva som kan være galt og hvordan du kan fikse det.
+### 3. Analyser feilmeldinger med AI
+Hvis du får feilmeldinger eller advarsler i konsollen:
+- Kopier feilmeldingen og del den med AI-assistenten
+- Be om forklaring: "Hva betyr denne feilen?"
+- Be om analyse: "Se på App.tsx og forklar hva som kan forårsake sakte ytelse"
+- Be om løsningsforslag: "Hvordan kan jeg fikse dette?"
 
-### 3. Bruk Claude Code til dypere analyse
-Hvis du får en feilmelding eller advarsel i konsollen:
-```bash
-# Kopier feilmeldingen og lim den inn i Claude Code
-# Be om analyse: "Hva betyr denne feilen?"
-# Eller be om en forklaring: "Hvorfor får jeg infinite loop warning?"
-```
+### 4. Test fiksene dine
+Når du tror du har fikset en bug:
+- Test manuelt i nettleseren
+- Sjekk at Network-fanen ikke viser uventede kall
+- Verifiser at Console er fri for feil
 
-Du kan også be Claude Code om å:
-- Analysere koden din: "Se på App.tsx og forklar hva som kan forårsake sakte ytelse"
-- Foreslå forbedringer: "Hvordan kan jeg fikse denne CSS-konflikten?"
-
-### 4. Bruk Playwright MCP til å teste fiksene dine
-Når du tror du har fikset en bug, kan du bruke Playwright MCP (via Claude Code) til å:
-- Automatisere testing av appen
-- Verifisere at brukere lastes inn korrekt
-- Teste at nye brukere legges til riktig
-- Sjekke at ingen uventede nettverkskall skjer
-
-Eksempel prompts til Claude Code med Playwright:
+**Valgfritt - Automatisert testing med Playwright:**
+Hvis du bruker Claude Code med Playwright MCP, kan du automatisere testingen:
 - "Bruk Playwright til å teste at brukerlisten lastes inn"
 - "Automatiser testing av å legge til en ny bruker"
 - "Sjekk at appen ikke gjør mer enn ett API-kall ved oppstart"
@@ -75,10 +66,59 @@ Etter denne øvelsen skal du:
 - Kunne bruke AI-verktøy til å diagnostisere bugs
 - Forstå vanlige React-feil (useEffect dependencies, state mutation, etc.)
 - Vite hvordan man beskriver bugs til AI for best mulig hjelp
-- Kunne bruke Playwright MCP til automatisert testing
+- Kunne teste og verifisere at fikser fungerer
 
 ## Ekstra utfordring
 Når du har fikset alle bugs:
-1. Be Claude Code om å forklare hvorfor hver bug oppstod
+1. Be AI-assistenten om å forklare hvorfor hver bug oppstod
 2. Be om forslag til hvordan du kan forhindre lignende bugs i fremtiden
-3. Bruk Playwright MCP til å lage en komplett testsuitte for appen
+3. Skriv tester for å sikre at buggene ikke kommer tilbake
+
+## Verktøy-spesifikke tips
+
+<details>
+<summary>Claude Code</summary>
+
+- Claude Code kan lese filer direkte - bare referer til filnavn
+- Bruk Playwright MCP for automatisert testing:
+  ```
+  Bruk Playwright til å åpne appen og verifisere at brukerlisten lastes
+  ```
+- Be om analyse av spesifikke filer:
+  ```
+  Analyser App.tsx og finn potensielle ytelsesproblem
+  ```
+
+</details>
+
+<details>
+<summary>VS Code med GitHub Copilot</summary>
+
+- Åpne Copilot Chat med **Ctrl+Shift+I** (Windows/Linux) eller **Cmd+Shift+I** (Mac)
+- Bruk `@workspace` for kontekst om hele prosjektet
+- Marker problematisk kode og bruk "Copilot" → "Fix" fra høyreklikk-menyen
+- Lim inn feilmeldinger direkte i chatten for analyse
+
+</details>
+
+<details>
+<summary>GitHub Copilot CLI</summary>
+
+- Start med `copilot` i terminalen
+- Beskriv problemet du ser:
+  ```
+  The React app keeps making infinite network requests
+  ```
+- Bruk `gh copilot explain` for å forstå feilmeldinger
+
+</details>
+
+<details>
+<summary>Andre AI-verktøy (ChatGPT, Claude web, etc.)</summary>
+
+- Kopier innholdet i `src/App.tsx` inn i chatten
+- Del feilmeldinger og advarsler fra konsollen
+- Beskriv symptomene du observerer
+- Be om trinnvis analyse av koden
+
+</details>

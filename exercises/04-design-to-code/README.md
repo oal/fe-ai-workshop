@@ -29,14 +29,11 @@ Dette kurset tilbyr to spor avhengig av om du har tilgang til Figma med MCP-inte
 - Bekreft at serveren kjører (du skal se en melding om at MCP er aktivert)
 
 #### 3. Implementer designet
-Bruk Copilot CLI / Claude Code CLI til å hente designet og implementere det:
+Bruk AI-assistenten din til å hente designet og implementere det:
 
-```bash
-# Start Copilot CLI i prosjektmappen din
-copilot
-
-# Eksempel på prompt:
-"Using Figma MCP, get the design for [FIGMA-KOMPONENT-LENKE] from my Figma file and implement it as a React component with TypeScript"
+**Eksempel på prompt:**
+```
+Using Figma MCP, get the design for [FIGMA-KOMPONENT-LENKE] from my Figma file and implement it as a React component with TypeScript
 ```
 
 #### 4. Verifiser Implementasjonen med Playwright MCP
@@ -347,3 +344,46 @@ Når du har fullført denne øvelsen, gå videre til:
 - **Exercise 6**: Refaktorering og Kodeoptimalisering
 
 God koding!
+
+## Verktøy-spesifikke tips
+
+<details>
+<summary>Claude Code</summary>
+
+- Claude Code kan lese bilder direkte - referer til `duolingo.png`
+- Bruk Figma MCP for direkte integrasjon med Figma-filer
+- Bruk Playwright MCP for å verifisere implementasjonen:
+  ```
+  Naviger til localhost:5173 og ta et skjermbilde for sammenligning
+  ```
+
+</details>
+
+<details>
+<summary>VS Code med GitHub Copilot</summary>
+
+- Åpne Copilot Chat med **Ctrl+Shift+I** (Windows/Linux) eller **Cmd+Shift+I** (Mac)
+- Legg ved bildet ved å klikke "Attach" eller vedlegg-ikonet
+- Velg `duolingo.png` og beskriv hva du vil implementere
+- Bruk `@workspace` for kontekst om starter-prosjektet
+
+</details>
+
+<details>
+<summary>GitHub Copilot CLI</summary>
+
+- CLI-versjonen støtter ikke bilder direkte
+- Beskriv designet i tekst og be om implementering
+- Bruk VS Code med Copilot Chat for beste resultat med bilder
+
+</details>
+
+<details>
+<summary>Andre AI-verktøy (ChatGPT, Claude web, etc.)</summary>
+
+- Last opp `duolingo.png` direkte i chatten
+- Beskriv ønsket implementering (React, HTML, etc.)
+- Kopier generert kode inn i starter-prosjektet
+- Iterer med oppfølgingsprompts for justeringer
+
+</details>
