@@ -49,7 +49,7 @@ Når du tror du har fikset en bug:
 - Verifiser at Console er fri for feil
 
 **Valgfritt - Automatisert testing med Playwright:**
-Hvis du bruker Claude Code med Playwright MCP, kan du automatisere testingen:
+Hvis du bruker et AI-verktøy med Playwright MCP (se [SETUP.md](../../SETUP.md)), kan du automatisere testingen:
 - "Bruk Playwright til å teste at brukerlisten lastes inn"
 - "Automatiser testing av å legge til en ny bruker"
 - "Sjekk at appen ikke gjør mer enn ett API-kall ved oppstart"

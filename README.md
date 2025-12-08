@@ -22,7 +22,7 @@ Før du starter workshopen, må du ha følgende installert og konfigurert:
 - **Node.js 20+** - For å kjøre eksemplene
 - **VS Code** - Med GitHub Copilot-extension
 - **GitHub Copilot-abonnement** - For AI-assistert koding
-- **Anthropic-konto** - For tilgang til Claude
+- **Anthropic-konto (valgfritt)** - For tilgang til Claude
 
 Se [SETUP.md](./SETUP.md) for detaljert installasjonsveiledning.
 
