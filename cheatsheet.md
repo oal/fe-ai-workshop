@@ -7,7 +7,7 @@
 ## Claude Code Snarveier
 
 ### Viktige tastatursnarveier
-- **Shift+Tab (2x)**: Åpne Plan Mode
+- **Shift+Tab**: Veksle mellom moduser (Normal → Auto-Accept → Plan)
 - **Ctrl+C**: Avbryt pågående operasjon
 - **Ctrl+D**: Avslutt Claude Code
 
@@ -15,7 +15,10 @@
 - `/mcp`: Liste alle tilgjengelige MCP-servere
 - `/help`: Få hjelp og se tilgjengelige kommandoer
 - `/clear`: Tøm samtalehistorikken
-- `/reset`: Start en ny samtale
+- `/rewind`: Gå tilbake til en tidligere tilstand
+- `/context`: Vis kontekstbruk visuelt
+- `/usage`: Vis abonnementsgrenser (kun for betalte planer)
+- `/cost`: Vis tokenforbruk
 
 ## Nullstille øvelser
 
@@ -60,7 +63,55 @@ Ulike AI-modeller gir ofte forskjellige resultater. Prøv samme øvelse med fler
 
 ---
 
-## Plan Mode Tips
+## Copilot CLI Tips
+
+### Installasjon
+```bash
+npm install -g @github/copilot
+copilot
+# Kjør /login for å autentisere
+```
+
+### Bruk
+Copilot CLI er samtalebasert - start med `copilot` og still spørsmål naturlig:
+
+```bash
+# Start Copilot CLI
+copilot
+
+# Eksempler på spørsmål du kan stille:
+# "hvordan finner jeg store filer i mappen?"
+# "forklar git rebase -i HEAD~3"
+# "lag en ny branch og push den"
+# "kjør tester med coverage"
+```
+
+### Tips for gode spørsmål
+- Vær spesifikk om feilen: "npm install feiler med EACCES-feil"
+- Inkluder kontekst: "hvordan fikse merge conflicts i package.json"
+- Be om forklaring: "forklar hva denne git-kommandoen gjør"
+
+### Emulere Plan Mode
+Copilot CLI har ikke innebygd plan mode, men du kan oppnå lignende resultater:
+
+1. **Be om en plan først:**
+   ```
+   Før du gjør endringer, analyser kodebasen og lag en plan for [oppgaven]
+   ```
+
+2. **Gjennomgå før implementering:**
+   ```
+   Ikke skriv kode ennå - bare forklar hva du ville gjort
+   ```
+
+3. **Steg-for-steg tilnærming:**
+   ```
+   List opp alle filer som må endres for å implementere [feature]
+   ```
+
+---
+
+## Plan Mode Tips (Claude Code)
 
 ### Hva er Plan Mode?
 Plan Mode lar Claude utforske kodebasen og lage en plan uten å endre kode.
@@ -251,37 +302,6 @@ Lag en Button-komponent som matcher designsystemet
 Implementer mobile, tablet og desktop-versjoner basert på Figma-artboards
 ```
 
-## Copilot CLI Tips
-
-### Installasjon
-```bash
-npm install -g @github/copilot
-gh copilot auth
-```
-
-### Beskrive bugs
-```bash
-# Be om hjelp med en kommando
-gh copilot suggest "hvordan finne store filer i mappen"
-
-# Forklar en kommando
-gh copilot explain "git rebase -i HEAD~3"
-```
-
-### Terminal-kommandoer
-```bash
-# Be om git-kommandoer
-gh copilot suggest "lag en ny branch og push den"
-
-# Få forslag til npm-scripts
-gh copilot suggest "kjør tester med coverage"
-```
-
-### Debugging-prompts
-- Vær spesifikk om feilen: "npm install feiler med EACCES-feil"
-- Inkluder kontekst: "hvordan fikse merge conflicts i package.json"
-- Be om forklaring: "forklar hva denne git-kommandoen gjør"
-
 ## Nyttige Generelle Prompts
 
 ### Kodeforståelse
@@ -346,7 +366,7 @@ Legg til TypeScript types for bedre type-sikkerhet
 ## Ressurser
 
 ### Dokumentasjon
-- [Claude Code Docs](https://docs.claude.ai/)
+- [Claude Code Docs](https://docs.anthropic.com/en/docs/claude-code)
 - [MCP Dokumentasjon](https://modelcontextprotocol.io/)
 - [Playwright Docs](https://playwright.dev/)
 
