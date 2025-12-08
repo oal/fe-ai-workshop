@@ -41,7 +41,7 @@ Etter at komponenten er implementert, bruk Playwright til å verifisere:
 
 ```bash
 # Eksempel på prompt:
-"Using Playwright MCP, navigate to http://localhost:3000 and verify that the [komponentnavn] component renders correctly. Take a screenshot for comparison."
+"Using Playwright MCP, navigate to http://localhost:5173 and verify that the [komponentnavn] component renders correctly. Take a screenshot for comparison."
 ```
 
 ### Eksempel-prompts for Figma MCP
@@ -105,6 +105,8 @@ Begge prosjektene bruker Vite med hot reloading. Velg React hvis du er komfortab
 #### 1. Hovedoppgave: Duolingo Quiz-komponent
 Implementer Duolingo quiz-grensesnittet fra `duolingo.png`:
 
+![Duolingo Quiz Design](duolingo.png)
+
 **Designet inneholder:**
 - Fremdriftslinje øverst med X-knapp for å lukke
 - "NEW WORD" badge i grønt
@@ -156,7 +158,7 @@ Når komponenten er implementert, test den:
 
 ```bash
 # I Claude Code:
-"Using Playwright MCP, navigate to http://localhost:3000 and verify that the quiz component displays correctly. Click on each image card and verify the selection state changes."
+"Using Playwright MCP, navigate to http://localhost:5173 and verify that the quiz component displays correctly. Click on each image card and verify the selection state changes."
 
 "Take a screenshot and compare it with the original duolingo.png design"
 ```
@@ -217,7 +219,7 @@ Nyttige ressurser:
 
 **Grunnleggende navigasjon:**
 ```
-"Using Playwright MCP, navigate to http://localhost:3000 and take a screenshot"
+"Using Playwright MCP, navigate to http://localhost:5173 and take a screenshot"
 
 "Click on the 'Dashboard' button and verify the navigation works"
 
@@ -339,9 +341,10 @@ Etter å ha fullført denne øvelsen skal du kunne:
 
 ## Neste Steg
 
-Når du har fullført denne øvelsen, gå videre til:
-- **Exercise 5**: Testing og Kvalitetssikring med AI
-- **Exercise 6**: Refaktorering og Kodeoptimalisering
+Når du har fullført denne øvelsen:
+- Prøv **Bonusøvelse 5: Prosjektinstruksjoner** - Lær hvordan CLAUDE.md / copilot-instructions.md forbedrer AI-assistansen
+- Eksperimenter med egne designfiler fra Dribbble eller Behance
+- Del dine implementasjoner med workshop-gruppen
 
 God koding!
 
@@ -372,9 +375,9 @@ God koding!
 <details>
 <summary>GitHub Copilot CLI</summary>
 
-- CLI-versjonen støtter ikke bilder direkte
-- Beskriv designet i tekst og be om implementering
-- Bruk VS Code med Copilot Chat for beste resultat med bilder
+- Start Copilot CLI: `copilot`
+- Referer til `duolingo.png` i prompten din
+- Copilot CLI støtter bilder og vil analysere designet
 
 </details>
 

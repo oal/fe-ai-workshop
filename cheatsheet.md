@@ -255,7 +255,7 @@ Implementer mobile, tablet og desktop-versjoner basert på Figma-artboards
 
 ### Installasjon
 ```bash
-npm install -g @githubnext/github-copilot-cli
+npm install -g @github/copilot
 gh copilot auth
 ```
 

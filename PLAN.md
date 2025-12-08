@@ -18,8 +18,8 @@
 - [x] Create Exercise 1 (warm-up) - simple HTML/CSS/JS page
 - [x] Create Exercise 2 (React app) - Vite + React 19 + TypeScript todo app
 - [x] Create Exercise 3 (debug challenge) - buggy React app
-- [x] Create Exercise 4 (design-to-code) - both tracks
-- [x] Add Material UI Dashboard mockup for Track B (HTML file)
+- [x] Create Exercise 4 (design-to-code) - both tracks (Duolingo design)
+- [x] Create Exercise 5 (agent-instructions) - bonus exercise
 - [x] Create cheatsheet.md
 - [x] Test all exercises
 
@@ -45,9 +45,13 @@ ai-coding-workshop/
 │   │   ├── README.md
 │   │   ├── package.json
 │   │   └── src/
-│   └── 04-design-to-code/      # Figma MCP or screenshot track
+│   ├── 04-design-to-code/      # Figma MCP or screenshot track
+│   │   ├── README.md
+│   │   └── duolingo.png        # Screenshot for Track B
+│   └── 05-agent-instructions/  # Bonus: Project instructions
 │       ├── README.md
-│       └── designs/            # Screenshots for non-Figma users
+│       ├── package.json
+│       └── src/
 ```
 
 ---

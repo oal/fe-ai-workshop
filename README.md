@@ -19,7 +19,7 @@ Denne workshopen tar for seg hvordan frontend-utviklere kan bruke AI som en plan
 
 Før du starter workshopen, må du ha følgende installert og konfigurert:
 
-- **Node.js 20+** - For å kjøre eksemplene
+- **Node.js 22+** - For å kjøre eksemplene
 - **VS Code** - Med GitHub Copilot-extension
 - **GitHub Copilot-abonnement** - For AI-assistert koding
 - **Anthropic-konto (valgfritt)** - For tilgang til Claude
@@ -34,6 +34,10 @@ Workshopen består av 4 praktiske øvelser:
 2. **React App Enhancement** - Utvid en eksisterende React-applikasjon med nye features
 3. **Debug Challenge** - Bruk AI til å finne og fikse bugs i eksisterende kode
 4. **Design-to-Code** - Generer kode fra designfiler og mockups
+
+### Bonusøvelse
+
+5. **Prosjektinstruksjoner** - Se hvordan AI-genererte prosjektinstruksjoner (CLAUDE.md / copilot-instructions.md) dramatisk forbedrer AI-assistansen
 
 ## Agenda
 
