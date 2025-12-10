@@ -27,19 +27,23 @@ For å prøve en øvelse på nytt (f.eks. med en annen AI-modell), kan du nullst
 ### Nullstill en enkelt øvelse
 ```bash
 # Nullstill øvelse 1 (warm-up)
-git checkout -- exercises/01-warm-up/
+git restore exercises/01-warm-up/
+git clean -fd exercises/01-warm-up/
 
 # Nullstill øvelse 2 (react-app)
-git checkout -- exercises/02-react-app/
+git restore exercises/02-react-app/
+git clean -fd exercises/02-react-app/
 
 # Nullstill øvelse 3 (debug-challenge)
-git checkout -- exercises/03-debug-challenge/
+git restore exercises/03-debug-challenge/
+git clean -fd exercises/03-debug-challenge/
 
 # Nullstill øvelse 4 (design-to-code)
-git checkout -- exercises/04-design-to-code/
+git restore exercises/04-design-to-code/
+git clean -fd exercises/04-design-to-code/
 ```
 
-> **Tips:** Husk å committe eller stashe endringene dine først hvis du vil beholde dem!
+> **Merk:** `git restore` tilbakestiller endrede filer, `git clean -fd` fjerner nye filer. Husk å committe eller stashe endringene dine først hvis du vil beholde dem!
 
 ---
 

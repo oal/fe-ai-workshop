@@ -203,6 +203,6 @@ claude mcp add figma-desktop --transport http http://127.0.0.1:3845/mcp
 
 Hvis du opplever problemer med installasjonene:
 
-- **Claude Code:** Sjekk [dokumentasjonen](https://docs.claude.ai)
+- **Claude Code:** Sjekk [dokumentasjonen](https://docs.anthropic.com/en/docs/claude-code)
 - **GitHub Copilot:** Sjekk [GitHub Copilot dokumentasjon](https://docs.github.com/copilot)
 - **MCP-servere:** Kjør `/mcp` i Claude Code for å se status på tilkoblede servere
