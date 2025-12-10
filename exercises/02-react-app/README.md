@@ -102,8 +102,8 @@ Applikasjonen vil kjøre på http://localhost:5173
 <summary>GitHub Copilot CLI</summary>
 
 - Start med `copilot` i terminalen
-- Bruk `gh copilot explain` for å forstå eksisterende kode først
-- Be om en plan i chat-modus før du ber om kodeendringer
+- Still spørsmål om koden, f.eks. "forklar App.tsx" eller bruk `@src/App.tsx` for å referere til filer
+- Be om en plan før du ber om kodeendringer
 - Implementer steg for steg basert på planen
 
 </details>

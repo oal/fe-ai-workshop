@@ -109,7 +109,7 @@ Når du har fikset alle bugs:
   ```
   The React app keeps making infinite network requests
   ```
-- Bruk `gh copilot explain` for å forstå feilmeldinger
+- Be om hjelp til å forstå feilmeldinger ved å spørre naturlig
 
 </details>
 

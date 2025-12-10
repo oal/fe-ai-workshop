@@ -76,8 +76,7 @@ Dette starter en utviklingsserver med automatisk oppdatering når du endrer kode
 <summary>GitHub Copilot CLI</summary>
 
 - Start med `copilot` i terminalen
-- Bruk `gh copilot explain` for å få forklaring på kode
-- Bruk `gh copilot suggest` for å få forslag til kommandoer
+- Still spørsmål naturlig, f.eks. "forklar denne koden" eller "hvordan kjører jeg tester?"
 
 </details>
 
