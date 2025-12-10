@@ -3,7 +3,7 @@ import './App.css'
 function App() {
   return (
     <div className="app">
-      {/* Implement Duolingo quiz component here */}
+      {/* Implement your component here */}
     </div>
   )
 }

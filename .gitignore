@@ -36,3 +36,9 @@ npm-debug.log*
 
 # Vite
 vite.config.ts.timestamp-*
+
+# Playwright MCP
+.playwright-mcp/
+
+# Windows artifacts
+nul
