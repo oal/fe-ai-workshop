@@ -11,8 +11,6 @@ Denne workshopen tar for seg hvordan frontend-utviklere kan bruke AI som en plan
 - Generere kode fra design
 - Jobbe mer effektivt med HTML, CSS, JavaScript og React
 
-**Varighet:** 1,5 timer
-
 **Målgruppe:** Frontend-utviklere med erfaring i HTML, CSS, JavaScript og TypeScript
 
 ## Forutsetninger
@@ -41,15 +39,15 @@ Workshopen består av 4 praktiske øvelser:
 
 ## Agenda
 
-| Tid | Del | Format |
-|-----|-----|--------|
-| 0:00-0:10 | Introduksjon & oppsettsjekk | Presentasjon |
-| 0:10-0:20 | Demo: Plan Mode & parallelle agenter | Live demo |
-| 0:20-0:35 | Øvelse 1: Warm-up (HTML/CSS/JS) | Praktisk |
-| 0:35-0:45 | Demo: Playwright MCP | Live demo |
-| 0:45-1:05 | Øvelse 2 eller 3: React App ELLER Debug Challenge | Praktisk |
-| 1:05-1:20 | Øvelse 4: Design-to-Code | Praktisk |
-| 1:20-1:30 | Q&A, tips & avslutning | Diskusjon |
+| Del | Format |
+|-----|--------|
+| Introduksjon & oppsettsjekk | Presentasjon |
+| Demo: Plan Mode & parallelle agenter | Live demo |
+| Øvelse 1: Warm-up (HTML/CSS/JS) | Praktisk |
+| Demo: Playwright MCP | Live demo |
+| Øvelse 2 eller 3: React App ELLER Debug Challenge | Praktisk |
+| Øvelse 4: Design-to-Code | Praktisk |
+| Q&A, tips & avslutning | Diskusjon |
 
 ## Kom i gang
 

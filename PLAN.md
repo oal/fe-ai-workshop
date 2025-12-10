@@ -1,7 +1,6 @@
 # AI Coding Workshop for Frontend Developers
 
 ## Workshop Overview
-**Duration:** 1.5 hours (exercises can be continued afterward)
 **Audience:** Frontend developers familiar with HTML/CSS/JS/TS, some Copilot experience
 **Goal:** Inspire developers to use AI as a planning partner and debugging colleague, not just autocomplete
 
@@ -56,17 +55,17 @@ ai-coding-workshop/
 
 ---
 
-## Workshop Agenda (1.5 hours)
+## Workshop Agenda
 
-| Tid | Del | Format |
-|-----|-----|--------|
-| 0:00-0:10 | Introduksjon & oppsettsjekk | Presentasjon |
-| 0:10-0:20 | Demo: Plan Mode & parallelle agenter | Live demo |
-| 0:20-0:35 | Øvelse 1: Warm-up (HTML/CSS/JS) | Praktisk |
-| 0:35-0:45 | Demo: Playwright MCP | Live demo |
-| 0:45-1:05 | Øvelse 2 eller 3: React App ELLER Debug Challenge | Praktisk |
-| 1:05-1:20 | Øvelse 4: Design-to-Code | Praktisk |
-| 1:20-1:30 | Q&A, tips & avslutning | Diskusjon |
+| Del | Format |
+|-----|--------|
+| Introduksjon & oppsettsjekk | Presentasjon |
+| Demo: Plan Mode & parallelle agenter | Live demo |
+| Øvelse 1: Warm-up (HTML/CSS/JS) | Praktisk |
+| Demo: Playwright MCP | Live demo |
+| Øvelse 2 eller 3: React App ELLER Debug Challenge | Praktisk |
+| Øvelse 4: Design-to-Code | Praktisk |
+| Q&A, tips & avslutning | Diskusjon |
 
 ---
 
